@@ -11,3 +11,16 @@ Scenario: Add the profile details
 	When I navigate to Profile Page
 	And I added the profile details
 	Then The profile details added successfully
+
+Scenario Outline: Add the language details
+Given I logged into localhost successfully
+When I navigate to Profile Page
+And I updated '<describtion>' details
+Then The details added successfully '<describtion>'
+
+Examples: 
+| describtion   |
+| language      |
+| Skills        |
+| certification |
+| Education     |

@@ -45,5 +45,22 @@ namespace internship1.StepDefintion
             
             
         }
+
+        [When(@"I updated '([^']*)' details")]
+        public void WhenIUpdatedDetails(string language)
+        {
+            IWebDriver driver = new ChromeDriver();
+            LanguagePage languagePageObj = new LanguagePage();
+            languagePageObj.Language(driver);
+
+        }
+
+        [Then(@"The details added successfully '([^']*)'")]
+        public void ThenTheDetailsAddedSuccessfully(string language)
+        {
+
+        }
+
+
     }
 }
