@@ -15,12 +15,10 @@ Scenario: Add the profile details
 Scenario Outline: Add the language details
 Given I logged into localhost successfully
 When I navigate to Profile Page
-And I updated '<describtion>' details
-Then The details added successfully '<describtion>'
+And I updated '<language>' details
+Then The details added successfully '<language>'
 
 Examples: 
-| describtion   |
-| language      |
-| Skills        |
-| certification |
-| Education     |
+| language | level    |
+| English  | Expert   |
+| Hindi    | Basic    |

@@ -109,15 +109,14 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Add the language details")]
-        [NUnit.Framework.TestCaseAttribute("language", null)]
-        [NUnit.Framework.TestCaseAttribute("Skills", null)]
-        [NUnit.Framework.TestCaseAttribute("certification", null)]
-        [NUnit.Framework.TestCaseAttribute("Education", null)]
-        public void AddTheLanguageDetails(string describtion, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("language level", null)]
+        [NUnit.Framework.TestCaseAttribute("", null)]
+        [NUnit.Framework.TestCaseAttribute("", null)]
+        public void AddTheLanguageDetails(string language, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("describtion", describtion);
+            argumentsOfScenario.Add("language", language);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add the language details", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 15
 this.ScenarioInitialize(scenarioInfo);
@@ -136,10 +135,10 @@ testRunner.Given("I logged into localhost successfully", ((string)(null)), ((Tec
 testRunner.When("I navigate to Profile Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 18
-testRunner.And(string.Format("I updated \'{0}\' details", describtion), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And(string.Format("I updated \'{0}\' details", language), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 19
-testRunner.Then(string.Format("The details added successfully \'{0}\'", describtion), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then(string.Format("The details added successfully \'{0}\'", language), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
